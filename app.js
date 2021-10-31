@@ -1,43 +1,29 @@
-window.onload = function(){
-    let searchBtn = document.querySelector("#search-btn")
-<<<<<<< HEAD
-=======
+window.onload = function() {
 
-    searchBtn.addEventListener("click", () => {
-        fetch("http://localhost/info2180-lab4/superheroes.php?q=")
-            .then(response => {
-                if(response.ok){
-                    return response.text()
-                }
-                else{
-                    throw new Error("An error has occured")
-                }
-            })
-            .then(data => {
-                alert(data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    })
-}
->>>>>>> 86fbcc115c9dbc776306a6b0c86d9646bfb091ea
-
-    searchBtn.addEventListener("click", () => {
-        fetch("http://localhost/info2180-lab4/superheroes.php?q=")
-            .then(response => {
-                if(response.ok){
-                    return response.text()
-                }
-                else{
-                    throw new Error("An error has occured")
-                }
-            })
-            .then(data => {
-                alert(data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    })
-}
+    const  Btn = document.querySelector('button');
+    const httpReq= new XMLHttpRequest();
+  
+    Btn.addEventListener('click', function(ele) {
+      ele.preventDefault();
+  
+      // GET Request
+      const  url = "superheroes.php";
+      httpReq.onreadystatechange = callback;
+      httpReq.open('GET', url);
+      httpReq.send();
+    });
+  
+    function callback() {
+      if (httpReq.readyState === XMLHttpRequest.DONE) {
+        if (httpReq.status === 200) {
+          const res = httpReq.responseText;
+          /*const hero = document.querySelector('#quote');*/
+         /* quote.innerHTML = response;*/
+            alert(res);
+        } else {
+          alert('There was a problem with the request.');
+        }
+      }
+    }
+  
+  }

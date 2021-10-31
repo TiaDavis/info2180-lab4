@@ -1,10 +1,29 @@
-<html>
-  <head> 
-      <title> Lab 4 </title>
-    <script src="app.js"></script> 
-  </head> 
-  <body> 
-    <h1>Avengers Character Search</h1>
-    <button type="button">Search</button>
-  </body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"> </script>
+    <title>Avengers Character Search</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>AVENGERS CHARACTER SEARCH</h1>
+        </header>
+
+        <main>
+            <form>
+                <label><b>Search by Full Name or Alias</b></label>
+                <input id ="searchField" name="search" type="text" placeholder="e.g. Captain America or Steve Rogers" />
+                <button name ="searchbtn" id="btn" type ="submit">Search</button>
+            </form>
+            <div id ="result">
+            </div>
+        </main>
+
+    </div>
+</body>
 </html>

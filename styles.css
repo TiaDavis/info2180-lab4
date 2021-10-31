@@ -122,8 +122,8 @@ div#result h3{
 }
 
 header{
-    color: #7f0000;
-    background: #FF3232;
+    color: #ffffff;
+    background: #9594e9;
     background: -webkit-gradient(linear, left top, left bottom, from(#FF3232), to(#FFA500));
     background: -o-linear-gradient(#FF3232, #FFA500);
     background: linear-gradient(#FF3232, #FFA500);

@@ -16,10 +16,10 @@ window.onload = function() {
     function callback() {
       if (httpReq.readyState === XMLHttpRequest.DONE) {
         if (httpReq.status === 200) {
-          const res = httpReq.responseText;
+          const resp = httpReq.responseText;
           /*const hero = document.querySelector('#quote');*/
          /* quote.innerHTML = response;*/
-            alert(res);
+            alert(resp);
         } else {
           alert('There was a problem with the request.');
         }
